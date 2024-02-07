@@ -7,13 +7,12 @@ dnf update -y
 dnf install -y sbcl git make gcc ncurses-devel redhat-rpm-config curl rlwrap
 
 ### Config
+cp .bashrc ~/.bashrc && source ~/.bashrc
 git clone https://github.com/garlic0x1/.lem ~/.config/lem
-curl https://raw.githubusercontent.com/garlic0x1/dotfiles/master/.bashrc > ~/.bashrc
-source ~/.bashrc
 
 ### Applications
-mkdir tools
-pushd tools
+mkdir ~/tools
+pushd ~/tools
 
 # install quicklisp
 curl https://beta.quicklisp.org/quicklisp.lisp > ql-install.lisp
